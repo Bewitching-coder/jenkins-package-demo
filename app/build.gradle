@@ -6,7 +6,7 @@ plugins {
 //    id 'stringfog'
 }
 
-apply plugin: 'stringfog'
+// apply plugin: 'stringfog'
 
 //apply plugin:"com.bytedance.android.aabResGuard"
 
@@ -68,11 +68,11 @@ dependencies {
     implementation 'com.github.megatronking.stringfog:xor:3.0.0'
 }
 
-stringfog {
-    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
-    enable true
-    fogPackages = ["com.example"]
-}
+// stringfog {
+//     implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+//     enable true
+//     fogPackages = ["com.example"]
+// }
 
 //xal {
 //    setAllowBackup(false)
