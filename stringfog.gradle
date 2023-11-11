@@ -1,0 +1,16 @@
+import com.github.megatronking.stringfog.plugin.kg.RandomKeyGenerator
+
+apply plugin: 'stringfog'
+
+stringfog {
+    kg new RandomKeyGenerator()
+    // 开关
+    enable false
+    // 加解密库的实现类路径，需和上面配置的加解密算法库一致。
+    implementation 'com.github.megatronking.stringfog.xor.StringFogImpl'
+    // 指定需加密的代码包路径，可配置多个，未指定将默认全部加密。
+//    fogPackages = ['com.xxx.xxx']
+    fogPackages = [
+            'com.d.ray'
+    ]
+}

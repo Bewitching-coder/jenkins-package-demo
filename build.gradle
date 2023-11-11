@@ -1,0 +1,57 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "${project.rootDir}/repo/" }
+        maven { url 'https://maven.apuscn.com/nexus/content/repositories/android-xal-releases/' }
+        maven { url 'https://maven.apuscn.com/nexus/content/repositories/android-xal-snapshots/' }
+        google()
+        mavenCentral()
+        jcenter()
+        maven { url 'https://maven.apuscn.com/nexus/content/repositories/jcenterx/' }
+    }
+    dependencies {
+        classpath("net.sf.proguard:proguard-gradle:6.2.2")
+//        classpath "com.android.tools.build:gradle:4.0.2"
+        classpath ('com.xal.gradle.plugin:xal-gradle-plugin:4.6.8') {
+            exclude group:"com.github.megatronking.stringfog", module: "gradle-plugin"
+            exclude group:"com.github.megatronking.stringfog", module: "xor"
+            exclude group:"net.sf.proguard", module: "proguard-gradle"
+        }
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:1.5.30"
+        classpath 'com.github.megatronking.stringfog:gradle-plugin:3.0.0'
+        // 选用加解密算法库，默认实现了xor算法，也可以使用自己的加解密库。
+        classpath 'com.github.megatronking.stringfog:xor:3.0.0'
+//        classpath("com.bytedance.android:aabresguard-plugin:0.1.9")
+//        classpath("com.xal.publicrepository:aabresguard-plugin:0.1.9")
+        // https://mvnrepository.com/artifact/net.sf.proguard/proguard
+
+
+    }
+}
+
+
+allprojects {
+    repositories {
+        maven { url "${project.rootDir}/repo/" }
+        maven { url 'https://maven.apuscn.com/nexus/content/repositories/android-xal-releases/' }
+        maven { url 'https://maven.apuscn.com/nexus/content/repositories/android-xal-snapshots/' }
+        maven { url 'https://maven.apuscn.com/nexus/content/repositories/jcenterx/' }
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url 'https://artifact.bytedance.com/repository/pangle/'
+        }
+        maven { url 'https://artifacts.applovin.com/android' }
+        maven { url "https://artifact.bytedance.com/repository/pangle" }
+        maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+        maven { url "https://sdk.tapjoy.com" }
+        maven { url "https://android-sdk.is.com" }
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

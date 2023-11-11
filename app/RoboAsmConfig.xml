@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- RoboAsm 替换父类配置 -->
+<!--<configuration>-->
+
+<!--    <ReplaceSuperClass>-->
+<!--        <superClassName>com.example.demo_8.TestSuperClassA</superClassName>-->
+<!--        <replaceSuperClassName>com.example.demo_8.TestSuperClassB</replaceSuperClassName>-->
+<!--    </ReplaceSuperClass>-->
+
+<!--</configuration>-->
+
+
+<!-- RoboAsm 替换类配置 -->
+<configuration>
+
+    <ReplaceClassInvoke>
+        <className>com.example.kalina_demo.TestClass</className>
+        <replaceClassName>com.example.kalina_demo.TestClassB</replaceClassName>
+    </ReplaceClassInvoke>
+
+</configuration>
+
+<!-- RoboAsm 替换方法 -->
+<!--<configuration>-->
+
+<!--    <ReplaceMethodCode>-->
+<!--        <className>com.Test</className>-->
+<!--        <methodName>b</methodName>-->
+<!--        <methodDescriptor>(Landroid/content/Context;)Ljava/lang/String;</methodDescriptor>-->
+<!--        <interrupt>true</interrupt>-->
+<!--        <replaceClassName>com.TestProxy</replaceClassName>-->
+<!--        <replaceMethodName>fixed42250</replaceMethodName>-->
+<!--    </ReplaceMethodCode>-->
+
+<!--</configuration>-->

@@ -18,4 +18,13 @@
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
-#-renamesourcefileattribute SourceFile
+-renamesourcefileattribute SourceFile
+-keep class okhttp3.** {*;}
+-keep class androidx.**{*;}
+-keep class kotlin.**{*;}
+-keep class kotlinx.**{*;}
+-keep class java.**{*;}
+-keep class javax.**{*;}
+-keep class android.**{*;}
+
+-ignorewarnings
